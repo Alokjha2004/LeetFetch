@@ -21,76 +21,81 @@ requirements.txt should contain:
 requests
 python-dotenv
 ```
+---
 
-🔐 Setup .env
+## 🔐 Setup .env
 Create a .env file in the root folder:
 
-env
-Copy
-Edit
-LEETCODE_SESSION=your_session_id_here
-CSRFTOKEN=your_csrf_token_here
-🔍 How to get LEETCODE_SESSION and CSRFTOKEN:
-Open leetcode.com and log in.
+```bash
+LEETCODE_SESSION = your_session_id_here
+CSRFTOKEN = your_csrf_token_here
+```
 
-Right-click → Inspect → go to Application tab.
+---
 
-On the left, select Cookies > https://leetcode.com
 
-Copy values for:
+## 🔍 How to get `LEETCODE_SESSION` and `CSRFTOKEN`:
 
-LEETCODE_SESSION
+1. Open [leetcode.com](https://leetcode.com) and log in.  
+2. Right-click → Inspect → go to the **Application** tab.  
+3. On the left sidebar, select **Cookies > https://leetcode.com**  
+4. Copy values for:  
+   - `LEETCODE_SESSION`  
+   - `csrftoken`  
+5. Paste them into your `.env` file.
 
-csrftoken
+📸 **Screenshot Example**:  
+> _(Insert image here showing browser devtools and cookie section)_
 
-Paste them into your .env file.
+--- 
 
-📸 Screenshot Example:
+## 📁 Project Files
 
-(Insert image here showing browser devtools and cookie section)
+| File                    | Description                                             |
+|-------------------------|---------------------------------------------------------|
+| `get_username.py`       | Prints your LeetCode username using session cookie      |
+| `get_total_solved.py`   | Fetches total number of accepted problems               |
+| `scrape_all_questions.py` | Scrapes all accepted submissions with timestamps (deduplicated) |
 
-📁 Project Files
-File	Description
-get_username.py	Prints your LeetCode username using session cookie
-get_total_solved.py	Fetches total number of accepted problems
-scrape_all_questions.py	Scrapes all accepted submissions with timestamps (deduplicated)
+---
 
-🚀 Usage
+## 🚀 Usage
+
 Run each script individually:
 
-bash
-Copy
-Edit
+```bash
 python get_username.py
 python get_total_solved.py
 python scrape_all_questions.py
-📦 Output
-get_username.py
-bash
-Copy
-Edit
+```
+--- 
+
+## 📦 Output
+
+### `get_username.py`
+
+```bash
 ✅ Logged in as: alok_jha
-get_total_solved.py
-bash
-Copy
-Edit
+```
+
+### `get_total_solved.py`
+
+```bash
 📊 Total Solved Questions: 224
-scrape_all_questions.py
-bash
-Copy
-Edit
+```
+
+### `scrape_all_questions.py`
+
+```bash
 📥 Fetching all accepted submissions...
 ✅ Total unique accepted questions: 224
 💾 Saved to solved_questions.json
+```
 📸 Screenshots:
 
 (Leave space here to add actual screenshots of terminal output + generated solved_questions.json preview)
 
-📄 License
+---
+
+## 📄 License
 This project is licensed under the MIT License.
-
-vbnet
-Copy
-Edit
-
-Let me know if you'd like me to generate the actual `README.md` file or push structure suggestions for your GitHub repo
