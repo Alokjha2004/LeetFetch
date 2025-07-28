@@ -44,12 +44,15 @@ CSRFTOKEN = your_csrf_token_here
    - `csrftoken`  
 5. Paste them into your `.env` file.
 
-📸 **Screenshot Example**:  
-> _(Insert image here showing browser devtools and cookie section)_
+### 📸 **Screenshot Example**:  
+
+<img width="800" height="449" alt="Screenshot 2025-07-28 200153" src="https://github.com/user-attachments/assets/2ec1531b-a074-4309-b4d4-2b6a71c03d55" />
+
 
 --- 
 
-## 📁 Project Files
+## 📁 Project
+ Files
 
 | File                    | Description                                             |
 |-------------------------|---------------------------------------------------------|
